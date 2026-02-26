@@ -1,0 +1,12 @@
+# OpenClaw/OpenCode ignored files
+.openclaw/
+.opencode/
+.config/
+node_modules/
+*.log
+*.bak
+*.png
+memory/
+*.sock
+credentials/
+*.env
