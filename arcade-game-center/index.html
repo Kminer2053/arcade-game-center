@@ -12,6 +12,24 @@
         canvas { background: #000; display: block; margin: 0 auto; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
         .controls { display: none; margin-top: 10px; }
         .controls button { padding: 10px 20px; margin: 5px; font-size: 16px; }
+        #status-panel {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .status-line {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        #next-goal {
+            margin: 0;
+            font-size: 14px;
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
@@ -23,8 +41,14 @@
     </div>
     
     <div id="game-container">
-        <h2 id="game-title">Game</h2>
-        <p>Score: <span id="score">0</span> | High Score: <span id="highscore">0</span></p>
+        <div id="status-panel">
+            <h2 id="game-title">Game</h2>
+            <div class="status-line">
+                <span>Score: <span id="score">0</span></span>
+                <span>High Score: <span id="highscore">0</span></span>
+            </div>
+            <p id="next-goal">Select a game to begin</p>
+        </div>
         <canvas id="gameCanvas" width="300" height="400"></canvas>
         <div id="mobile-controls" class="controls">
             <!-- Controls will be injected based on game type -->
